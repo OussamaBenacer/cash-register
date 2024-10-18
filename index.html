@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Cash Register</h1>
+
+      <div class="wrapper">
+        <div class="machine-container">
+          <div class="input-div">
+            <input type="number" id="cash" class="user-input" placeholder="Enter cash" value="" />
+          </div>
+
+          <button class="check-btn-styles" id="purchase-btn">Enter</button>
+
+          <p id="price-screen" class="price-screen"></p>
+          <div id="cash-drawer-display" class="cash-drawer-display"></div>
+
+
+          <div class="register-svg">
+            <img src="chash-reg.png"/>
+          </div>
+
+        </div>
+        <div id="change-due" class="change-due"></div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

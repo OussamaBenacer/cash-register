@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  color: white;
+  background-color: rgb(84, 84, 121);
+}
+
+h1 {
+  text-align: center;
+  margin-block: 20px 30px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background-color: rgb(76, 76, 114);
+  border-radius: 20px;
+}
+
+@media (max-width: 600px){
+  .wrapper {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+}
+
+.change-due {
+  line-height: 2;
+  display: none;
+}
+
+.change-due > :first-child {
+  line-height: 1.2;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.machine-container {
+  width: 340px;
+  position: relative;
+}
+
+.machine-container > *:not(.register-svg){
+  position: absolute;
+}
+
+.register-svg img{
+  width:100%;
+  user-select: none;
+}
+
+.machine-container .price-screen {
+  color: #1ece6d;
+  font-size: 1.5rem;
+  font-weight: 800;
+  right: 18%;
+  top: 6%;
+}
+
+.machine-container .cash-drawer-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 263px;
+  color: white;
+  bottom: 40px;
+  left: 40px;
+}
+
+
+.machine-container .cash-drawer-display .piece {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: calc((100% - 20px) / 5);
+  height: 43px;
+}
+
+.machine-container .cash-drawer-display .piece span:first-child {
+  font-size: 0.55rem;
+  color: rgb(175, 175, 214);
+}
+
+.machine-container .cash-drawer-display .piece span:last-child {
+  font-size: 0.8rem;
+  color: #fcffc5;
+}
+
+.machine-container .input-div {
+  top: 12%;
+  left: 35px;
+  width: 28%;
+}
+
+.machine-container .input-div input {
+  width: 100%;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 4px 7px; 
+}
+
+.machine-container .check-btn-styles {
+  outline: none;
+  border: none;
+  width: 41px;
+  height: 19px;
+  background-color: #e81c24;
+  font-size: 10px;
+  text-align: center;
+  padding-top: 0;
+  top: 160px;
+  left: 55px;
+  color: white;
+  cursor: pointer;
+}
+
+.machine-container .check-btn-styles::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: #c01517;
+}
+
+.machine-container .check-btn-styles:active {
+  padding-top: 5px;
+}
+
+.machine-container .check-btn-styles:active::after {
+  top:0;
+  background-color: #dfe0d2;
+}
+
